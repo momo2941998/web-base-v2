@@ -9,6 +9,8 @@ import { getToken } from "../service";
 import { routeList } from "./RouteList";
 import { StateLocation } from "../types/router";
 
+const defaultRoute = routeList.USER_INFO
+
 export function LoginPage() {
   let dispatch = useAppDispatch()
   let location = useLocation();
@@ -16,7 +18,7 @@ export function LoginPage() {
   let auth = useAppSelector(selectAuth)
 
   let state = location.state as StateLocation
-  let from = state?.from.pathname || routeList.USER_INFO
+  let from = state?.from.pathname || defaultRoute
   const [isPending, setIsPending] = useState(false)
 
   useEffect(() => {
