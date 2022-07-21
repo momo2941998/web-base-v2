@@ -1,0 +1,52 @@
+.logo {
+  height: 48px;
+  margin: 16px;
+  img {
+    width: 100%;
+  }
+
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+[data-theme="dark"] .site-layout .site-layout-background {
+  background: #141414;
+}
+
+#auth-status {
+  float: right;
+  &.ant-menu-item-selected, &.ant-menu-item-active {
+    background-color: inherit;
+    cursor: default;
+  }
+  &.ant-menu-item-active {
+    color:#ffffffa6;
+  }
+}
+
+.hello-user {
+  color: rgb(7, 35, 196);
+
+}
+.site-layout-header {
+  background-color: #d4dce5;
+}
+
+.sub-menu-item {
+  font-size: 12px;
+}
+
+#user-info-page {
+  #base-info {
+    margin: 0 0 0 48px;
+  }
+  .base-info-text {
+    color: #058aff;
+  }
+
+  #table-user-info {
+    margin: 0 48px 0 64px;
+  }
+}
