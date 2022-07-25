@@ -54,7 +54,16 @@ export function LayoutPage() {
           )
         }
       ]
-    }
+    },
+    {
+      key: "5",
+      title: "Upload",
+      label: (
+        <Link to={routeList.UPLOAD_FILE}>
+          Upload
+        </Link>
+      )
+    },
   ]
   return (
     <Layout style={{ minHeight: '100vh' }}>
