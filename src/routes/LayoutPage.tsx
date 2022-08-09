@@ -64,6 +64,15 @@ export function LayoutPage() {
         </Link>
       )
     },
+    {
+      key: "6",
+      title: "PDF",
+      label: (
+        <Link to={routeList.PDF_VIEWER}>
+          PDF tool
+        </Link>
+      )
+    },
   ]
   return (
     <Layout style={{ minHeight: '100vh' }}>

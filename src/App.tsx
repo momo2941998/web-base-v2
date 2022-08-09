@@ -5,7 +5,7 @@ import {
   Route,
   useNavigate,
 } from "react-router-dom";
-import { LayoutPage, LoginPage, Page404, Welcome, UserInfo, MyUploadFile } from "./routes";
+import { LayoutPage, LoginPage, Page404, Welcome, UserInfo, MyUploadFile, PDFViewer } from "./routes";
 import { routeList } from "./routes/RouteList";
 import { RequireAuth } from "./components/auth";
 import { useAppSelector } from "./app/hooks";
@@ -35,6 +35,12 @@ export default function App() {
               <RequireAuth>
                 <MyUploadFile />
               </RequireAuth>
+            )}
+          />
+          <Route 
+            path={routeList.PDF_VIEWER}
+            element={(
+              <PDFViewer />
             )}
           />
           <Route 
