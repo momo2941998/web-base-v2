@@ -28,26 +28,27 @@ interface State {
   startCapture: boolean;
 }
 
+const defaultState: State = {
+  on: false,
+  startX: 0,
+  startY: 0,
+  endX: 0,
+  endY: 0,
+  crossHairsTop: 0,
+  crossHairsLeft: 0,
+  isMouseDown: false,
+  windowWidth: 0,
+  windowHeight: 0,
+  borderWidth: 0,
+  cropPositionTop: 0,
+  cropPositionLeft: 0,
+  cropWidth: 0,
+  cropHeigth: 0,
+  imageURL: '',
+  startCapture: false,
+} 
 export default class ScreenCapture extends Component<Props, State> {
-  state = {
-    on: false,
-    startX: 0,
-    startY: 0,
-    endX: 0,
-    endY: 0,
-    crossHairsTop: 0,
-    crossHairsLeft: 0,
-    isMouseDown: false,
-    windowWidth: 0,
-    windowHeight: 0,
-    borderWidth: 0,
-    cropPositionTop: 0,
-    cropPositionLeft: 0,
-    cropWidth: 0,
-    cropHeigth: 0,
-    imageURL: '',
-    startCapture: false,
-  } as State;
+  state = defaultState
 
   handleWindowResize = () => {
     const windowWidth =
@@ -216,6 +217,8 @@ export default class ScreenCapture extends Component<Props, State> {
           );
           console.log(croppedCanvas)
           this.props.onEndCapture(croppedCanvas.toDataURL());
+          this.setState(defaultState)
+          this.handleWindowResize()
         }
 
       });

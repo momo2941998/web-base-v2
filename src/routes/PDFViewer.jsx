@@ -53,13 +53,10 @@ import ScreenCapture from '../components/pdf/ScreenCapture';
 export class PDFViewer extends React.Component {
   state = {
     screenCapture: '',
-    clientX: 0,
-    clientY: 0
   };
 
   handleScreenCapture = (screenCapture) => {
     this.setState({screenCapture});
-    return null
   };
 
   handleSave = () => {
@@ -76,15 +73,7 @@ export class PDFViewer extends React.Component {
     const { screenCapture } = this.state;
 
     return (
-      <div onMouseMove={(e)=> {
-        this.setState({
-          clientX: e.clientX,
-          clientY: e.clientY
-        })
-      }}>
       <div>
-        -----{this.state.clientX} ---- {this.state.clientY}
-      </div>
       <ScreenCapture onEndCapture={this.handleScreenCapture}>
         {({ onStartCapture }) => (
           <div>
