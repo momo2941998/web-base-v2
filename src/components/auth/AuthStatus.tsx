@@ -8,11 +8,6 @@ export function AuthStatus() {
   let navigate = useNavigate();
   let auth = useAppSelector(selectAuth)
   let dispatch = useAppDispatch()
-  let location = useLocation();
-  if (location.pathname === routeList.LOGIN) {
-    return (<Space />)
-  }
-
 
 
   if (!auth.user) {

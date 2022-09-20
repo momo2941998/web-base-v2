@@ -58,76 +58,8 @@ export function LoginPage() {
     <Row>
       <Col offset={4} span={16} >
         <Typography.Title level={1} style={{ textAlign: 'center', marginTop: '1em'}}>
-          Chào mừng đến trang Tra cứu cước Siptrunk
+          Login page
         </Typography.Title>
-      </Col>
-      <Col offset={8} span={8} >
-
-          <Form
-            style={{ padding: '32px 0 32px 0', margin: '32px 0 32px 0', border: 'solid 1px', borderRadius: '32px'}}
-            name="basic"
-            labelCol={{
-              span: 8,
-            }}
-            wrapperCol={{
-              span: 12,
-            }}
-            initialValues={{
-              remember: true,
-            }}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-          >
-          <div style={{textAlign: 'center', marginBottom: '64px'}}>
-          <Typography.Title level={1}>
-            Đăng nhập
-          </Typography.Title>
-          </div>
-            <Form.Item
-              label="Email"
-              name="username"
-              rules={[
-                {
-                  required: true,
-                  message: 'Please input your username!',
-                },
-              ]}
-            >
-              <Input />
-            </Form.Item>
-
-            <Form.Item
-              label="Mật khẩu"
-              name="password"
-              
-              rules={[
-                {
-                  required: true,
-                  message: 'Please input your password!',
-                },
-              ]}
-            >
-              <Input.Password />
-            </Form.Item>
-
-            <Form.Item
-              wrapperCol={{
-                offset: 8,
-                span: 16,
-              }}
-            >
-              <Button 
-                type="primary" 
-                htmlType="submit"
-                disabled={isPending}
-              >
-                <Space >
-                  Đăng nhập
-                  {isPending && <Spin />}
-                </Space>
-              </Button>
-            </Form.Item>
-          </Form>
       </Col>
     </Row>
     );
